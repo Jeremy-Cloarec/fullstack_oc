@@ -1,0 +1,25 @@
+
+
+BDD SQL
+
+Structured Query language : bdd relationnelle. Organise ses données dans des tables selon des schémas strictes. En gl, chaque table a un identifiant. On peut par ex faire redf à un l'id user dans une autre table.  
+
+Adaptées pour des données où des définitins fortes sont nécessaires. NoSql : pratique pour intégrer un  grand nombre d'élément. 
+
+MONGO DB
+
+On ne peux pas utiliser SQL pour communiquer avec MongoDB. Les données sont stockées comme des collections de documents individuels décrits en JSON. Il n' y a pas de schéma stricte de données. Il n'y a pas de relation concrète entre les différentes données. 
+Avantage : évolutivité et flexibilité. Facilité ave laquelle on communique avec JScript avec les documents écrit en JSON. 
+
+CREER UN SCHEMA DE DONNEES
+
+Possibilité d'implémenter des schéma de données
+> rend l'application plus robuste et plus stable
+
+La méthode  Schema  de Mongoose vous permet de créer un schéma de données pour votre base de données MongoDB.
+La méthode  model  transforme ce modèle en un modèle utilisable.
+
+ENREGISTRER ET RECUPERER DES DONNEES
+
+
+
