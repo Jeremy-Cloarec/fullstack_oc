@@ -1,4 +1,42 @@
+QU'EST CE QUE NODE ?
 
+Node est le runtime qui permet d'écrire nos tâche cot serveur, en JS, tel que : 
+
+- la logique métier
+- la persistance des données
+- la sécurité
+- ajoute des fonctionnalité que le js du navigateur standard ne possède pas: ex accès au système de fichier local. 
+
+Express est un framework reposant sur Node qui facilite la création et la gestion des serveurs Nodes. 
+
+INITIALISER VOTRE PROJET
+
+git init : génère un fichier package.json
+
+DÉMARRER UN SERVEUR 
+
+On importe le package natif de Node HTTP et on l'utilise dans le fichier server.js : on lui passe une fonction qui sera exécutée à chaque zppel effectu vers ce server.
+
+Cette fonction reçoit les objets rrequest et response en tant qu'argument. On utilise la méthode end de la réponse pour renvoyer une réponse de type string ("Voilà la réponse  du serveur")
+
+NODEMON
+
+node server => nodemon server
+
+EXPRESS 
+
+AJOUTER DES MIDDLEWARES
+
+Une application Express est une série de fonctions appelées middleware. Chaque élément de middleware reçoit les objet request et response. Aussi la métode next qui permet de passe au middleware suivant. 
+
+normalizePort : renvoie un port valide ; 
+errorHandler : recherche les différentes erreurs et les gère de manière appropiées. Elle est ensuite enregistrée dans le serveur.
+
+ERREURS DE CORS
+
+Cross Origin Ressources Sharing : systeme de sécurtité qui par défaut bloque les appels HTTP entre des serveurs différents. 
+
+Pour l'autoriser il faut ajouter des header à notre objet response. 
 
 BDD SQL
 

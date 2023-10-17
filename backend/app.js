@@ -19,12 +19,12 @@ app.use((req, res, next) => {
     next();
 });
 
-app.post('/api/stuff', (req, res, next) => {
-  const thing = new Thing({
-    // A completer
-  })
+// app.post('/api/stuff', (req, res, next) => {
+//   const thing = new Thing({
+//     // A completer
+//   })
     
-}) 
+// }) 
 
 
 app.get('/api/stuff', (req, res, next) => {
