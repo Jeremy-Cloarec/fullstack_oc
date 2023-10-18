@@ -1,14 +1,14 @@
 const express = require('express');
 const app = express();
-const mongoose = require('mongoose');
-const Thing = require('./models/Thing');
+//const mongoose = require('mongoose');
+//const Thing = require('./models/Thing');
 
 
-mongoose.connect('mongodb+srv://dbUser:123@cluster0.mlilnd6.mongodb.net/?retryWrites=true&w=majority',
-  { useNewUrlParser: true,
-    useUnifiedTopology: true })
-  .then(() => console.log('Connexion à MongoDB réussie !'))
-  .catch(() => console.log('Connexion à MongoDB échouée !'));
+//mongoose.connect('mongodb+srv://dbUser:123@cluster0.mlilnd6.mongodb.net/?retryWrites=true&w=majority',
+//  { useNewUrlParser: true,
+//    useUnifiedTopology: true })
+//  .then(() => console.log('Connexion à MongoDB réussie !'))
+//  .catch(() => console.log('Connexion à MongoDB échouée !'));
 
 app.use(express.json());
 
@@ -27,7 +27,7 @@ app.use((req, res, next) => {
 // }) 
 
 
-app.get('/api/stuff', (req, res, next) => {
+app.use('/api/stuff', (req, res, next) => {
     const stuff = [
       {
         _id: 'oeihfzeoi',
