@@ -15,9 +15,9 @@ git init : génère un fichier package.json
 
 DÉMARRER UN SERVEUR 
 
-On importe le package natif de Node HTTP et on l'utilise dans le fichier server.js : on lui passe une fonction qui sera exécutée à chaque zppel effectu vers ce server.
+On importe le package natif de Node HTTP et on l'utilise dans le fichier server.js : on lui passe une fonction qui sera exécutée à chaque appel effectué vers ce server.
 
-Cette fonction reçoit les objets rrequest et response en tant qu'argument. On utilise la méthode end de la réponse pour renvoyer une réponse de type string ("Voilà la réponse  du serveur")
+Cette fonction reçoit les objets request et response en tant qu'argument. On utilise la méthode end de la réponse pour renvoyer une réponse de type string ("Voilà la réponse  du serveur")
 
 NODEMON
 
@@ -34,20 +34,20 @@ errorHandler : recherche les différentes erreurs et les gère de manière appro
 
 ERREURS DE CORS
 
-Cross Origin Ressources Sharing : systeme de sécurtité qui par défaut bloque les appels HTTP entre des serveurs différents. 
+Cross Origin Ressources Sharing : systeme de sécurité qui par défaut bloque les appels HTTP entre des serveurs différents. 
 
 Pour l'autoriser il faut ajouter des header à notre objet response. 
 
 REQUETES POST 
 
 Pour gérer la requête POST venant de lapplication front, on a besoin d'en extraire le corps JSON. 
-app.use(express.json()); => Express prend toutes les requêtes qui ont comme Content-Type application/json et met à dispo leur body directemnt sur l'objet req. Ce qui permet d'écrire : 
+app.use(express.json()); => Express prend toutes les requêtes qui ont comme Content-Type application/json et met à dispo leur body directement sur l'objet req. Ce qui permet d'écrire : 
 
     app.post('/api/stuff', (req, res, next) => {
-    console.log(req.body);
-    res.status(201).json({
-        message: 'Objet créé !'
-    });
+        console.log(req.body);
+        res.status(201).json({
+            message: 'Objet créé !'
+        });
     });
 
 BDD SQL
