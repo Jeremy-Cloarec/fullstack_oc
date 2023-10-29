@@ -11,7 +11,7 @@ Express est un framework reposant sur Node qui facilite la création et la gesti
 
 INITIALISER VOTRE PROJET
 
-git init : génère un fichier package.json
+npm init : génère un fichier package.json
 
 DÉMARRER UN SERVEUR 
 
@@ -32,6 +32,11 @@ Une application Express est une série de fonctions appelées middleware. Chaque
 normalizePort : renvoie un port valide ; 
 errorHandler : recherche les différentes erreurs et les gère de manière appropiées. Elle est ensuite enregistrée dans le serveur.
 
+CREER UNE ROUTE GET
+
+200 : reponse réussie
+201 : création de ressource
+
 ERREURS DE CORS
 
 Cross Origin Ressources Sharing : systeme de sécurité qui par défaut bloque les appels HTTP entre des serveurs différents. 
@@ -50,6 +55,12 @@ app.use(express.json()); => Express prend toutes les requêtes qui ont comme Con
         });
     });
 
+-----------------------------------------------
+-----------------------------------------------
+CONFIGURER VOTRTE BDD--------------------------
+-----------------------------------------------
+-----------------------------------------------
+
 BDD SQL
 
 Structured Query language : bdd relationnelle. Organise ses données dans des tables selon des schémas strictes. En gl, chaque table a un identifiant. On peut par ex faire redf à un l'id user dans une autre table.  
@@ -61,6 +72,13 @@ MONGO DB
 On ne peux pas utiliser SQL pour communiquer avec MongoDB. Les données sont stockées comme des collections de documents individuels décrits en JSON. Il n' y a pas de schéma stricte de données. Il n'y a pas de relation concrète entre les différentes données. 
 Avantage : évolutivité et flexibilité. Facilité ave laquelle on communique avec JScript avec les documents écrit en JSON. 
 
+MONGOOSE 
+
+package qui facilite les intéraction avec la bdd. Il permet de : 
+> Valider le format de données
+> Gérer les reations entre les documents
+> Coommuniquer direct avec la bdd pour la lecture et l'écriture des documents. 
+
 CREER UN SCHEMA DE DONNEES
 
 Possibilité d'implémenter des schéma de données
@@ -69,7 +87,19 @@ Possibilité d'implémenter des schéma de données
 La méthode  Schema  de Mongoose vous permet de créer un schéma de données pour votre base de données MongoDB.
 La méthode  model  transforme ce modèle en un modèle utilisable.
 
+Shéma contient les champs souhaitéspour chaque Thing. On indique leur type ainsi que leur caractère. L'id est généré automatiquement par Mongoose. 
+
 ENREGISTRER ET RECUPERER DES DONNEES
+
+On crée une instance du modèle thing en lui passant un objet JS contenant toutes les infos requises du corps de requête analysé en ayant supprimé en amont le faux id_ envoyé par le front end. 
+
+L'opérateur spread ... est utilisé pour faire une copie de tous les éléments de req.body
+
+Comporte une methode save() qui enregistre Things dans la bdd. 
+
+
+
+
 
 
 
