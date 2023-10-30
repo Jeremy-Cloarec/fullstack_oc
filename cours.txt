@@ -97,7 +97,23 @@ L'opérateur spread ... est utilisé pour faire une copie de tous les éléments
 
 Comporte une methode save() qui enregistre Things dans la bdd. 
 
+Récupération d'un Thing spécifique
 
+:id : rend le séguement de la route accessible en tant que paramètre
+
+Méthode findOne() : trouver le Thing unique ayant le même _id que le paramètre de la requête. 
+Ce Thing est ensuite retourné dans une promise et enoyé au front. Si aucun Thing n'est trouvé, on envoie une erreur 404. 
+
+
+-----------------------------------------------
+-----------------------------------------------
+MODIFIER ET SUPPRIMER DES DONNEES--------------
+-----------------------------------------------
+-----------------------------------------------
+
+
+Methode updateOne()
+Méthode deleteOne()
 
 
 
